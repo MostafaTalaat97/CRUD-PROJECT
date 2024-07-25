@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+        <div class="container">
+            <div class="row g-3 py-4">
+                <div class="col-12 ">
+                    <div class="form-floating">
+                        <input oninput="validateInpute(this)" type="text" class="form-control" name="productName" id="ProductName" placeholder="productName">
+                        <div class="d-none alert alert-danger py-1 mt-1 mb-1">
+                            <small>name of product must be start with capital </small>
+                        </div>
+                        <label for="productName">Product Name</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input oninput="validateInpute(this)" type="number" class="form-control w" name="Productprice" id="ProductPrice" placeholder="productPrice">
+                        <div class="d-none alert alert-danger py-1 mt-1 mb-1">
+                            <small>name of product must be start with capital </small>
+                        </div>
+                        <label for="ProductPrice">Product Price</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input oninput="validateInpute(this)" list="categoryList" type="text" class="form-control" name="productCategory" id="productCategory" placeholder="productCategory">
+                        <div class="d-none alert alert-danger py-1 mt-1 mb-1">
+                            <small>name of product must be start with capital </small>
+                        </div>
+                        <label for="productCategory">Product category</label>
+                        <datalist id="categoryList">
+                            <option value="mobile">mobile</option>
+                            <option value="t.v">t.v</option>
+                            <option value="phone">phone</option>
+                        </datalist>
+                    </div><!-- ./form floating -->
+                </div><!-- ./list  -->
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="file" class="form-control" id="productImage">
+                        <label for="productImage" class="text-capitalize">product image</label>
+                    </div>
+                </div>
+                <div class="col-6 mx-auto">
+                    <button onclick="addProduct()" id="addBtn" class="btn btn-outline-primary text-uppercase w-100 mb-2">add product</button>
+                    <button onclick="updateProduct()" id="updateBtn" class="btn btn-outline-primary text-uppercase w-100 d-none">update product</button>
+                </div><!-- ./button -->
+                <div class="col-12">
+                    <input oninput="searchProduct()" type="text" class="form-control" placeholder="Search By Product Name" id="searchInput">
+                </div>
+            </div><!-- ./row -->
+        </div><!-- ./container -->
+
+        <div class="container">
+            <div id="rowData" class="row">
+                
+               
+            </div><!-- ./row -->
+        </div><!-- ./container -->
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
